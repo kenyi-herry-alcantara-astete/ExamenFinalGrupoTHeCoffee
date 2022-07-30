@@ -5,15 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c12933f-ec2a-4ca0-a96d-81cc80af730f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Contenedor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIApp.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIEnterItem.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/GUIEnterItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIApp.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIEnterItem.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIContainer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIEnterItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIContainer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,12 +48,26 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "207",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "353",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="ExamenParcial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
