@@ -17,6 +17,10 @@ public class Container {
         return items;
     }
 
+    public void addItem(String name,int costo,int peso){
+        items.add(new Item(name,costo,peso));
+    }
+
     public int getPesoTotal() {
         return pesoTotal;
     }
@@ -43,9 +47,7 @@ public class Container {
         }
     }
 
-    public void restore(Memento history){
 
-    }
 }
 
 

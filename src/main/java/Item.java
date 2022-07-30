@@ -8,4 +8,16 @@ public class Item {
         this.peso = peso;
         this.costo = costo;
     }
+
+    public int getCosto() {
+        return costo;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPeso() {
+        return peso;
+    }
 }
