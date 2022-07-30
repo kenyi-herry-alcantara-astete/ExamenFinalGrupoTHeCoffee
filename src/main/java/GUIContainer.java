@@ -1,5 +1,3 @@
-import org.intellij.lang.annotations.JdkConstants;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,7 +12,9 @@ public class GUIContainer extends JFrame {
     private JPanel PanelShowItems;
     private JPanel PanelContainer;
     private JButton FinishedButton;
+    private JButton deshacerButton;
     Container container = new Container();
+    ContainerCaretaker containerCaretaker = new ContainerCaretaker();
     public GUIContainer(){
         setContentPane(PanelContainer);
 
@@ -39,13 +39,26 @@ public class GUIContainer extends JFrame {
         addItemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //Antes de agregar se toma un snapshot y guardamos en la containerCaretaker
+                containerCaretaker.addSnapshot(container.createSnapshot());
+
+                //Agrego un item
                 container.addItem(textFieldName.getText(),Integer.parseInt(textFieldCosto.getText()),Integer.parseInt(textFieldPeso.getText()));
+
                 showItemsGui();
 
                 //Limpiando campos
                 textFieldName.setText("");
                 textFieldCosto.setText("");
                 textFieldPeso.setText("");
+            }
+        });
+        deshacerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Si presionamos deshacer, volvemos a un snapshot anterior.
+                container.restore(containerCaretaker.getRecentSnapshot());
+                showItemsGui();
             }
         });
     }
@@ -55,13 +68,37 @@ public class GUIContainer extends JFrame {
         //Limpiando la anterior lista
         PanelShowItems.removeAll();
         //Mostrando todos lis items actuales
+        int idRelative = 0;
         for (Item item: container.getItems()) {
+            int finalIdRelative = idRelative;
             //Creando panel item
             JPanel PanelOneItem= new JPanel();
+            JLabel labelName = new JLabel();
+            JLabel labelCosto = new JLabel();
+            JLabel labelPeso = new JLabel();
+            JLabel countLabel = new JLabel();
+
+            countLabel.setText(String.valueOf(finalIdRelative+1)+". ");
+
+            labelName.setText("Name:");
+            labelCosto.setText("Costo:");
+            labelPeso.setText("Peso:");
+
             JLabel labelNameItem = new JLabel();
             JLabel labelCostoItem = new JLabel();
             JLabel labelPesoItem=new JLabel();
+            JButton buttonDeleteItem = new JButton();
+            buttonDeleteItem.setText("Delete Item");
+            buttonDeleteItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
 
+                    //Elimino un item
+                    removeItemToContainer(finalIdRelative);
+                }
+
+            });
+            idRelative++;
             //Poniendo color
             PanelOneItem.setBackground(new Color(51,153,255));
 
@@ -71,17 +108,29 @@ public class GUIContainer extends JFrame {
             labelPesoItem.setText(String.valueOf(item.getPeso()));
 
             //Agregando los labels al PanelOneItem
+            PanelOneItem.add(countLabel);
+            PanelOneItem.add(labelName);
             PanelOneItem.add(labelNameItem);
+            PanelOneItem.add(labelCosto);
             PanelOneItem.add(labelCostoItem);
+            PanelOneItem.add(labelPeso);
             PanelOneItem.add(labelPesoItem);
+            PanelOneItem.add(buttonDeleteItem);
 
             //Agregando el panel Item al PanelShowItems
             PanelShowItems.add(PanelOneItem);
             PanelShowItems.revalidate();
             PanelShowItems.repaint();
 
-
-
         }
+    }
+
+    private void removeItemToContainer( int idRelative){
+        //Cada que eliminas un item se toma un snapshot y guardamos en la containerCaretaker
+        containerCaretaker.addSnapshot(container.createSnapshot());
+
+        //Elimino el item
+        container.removeItem(idRelative);
+        showItemsGui();
     }
 }
