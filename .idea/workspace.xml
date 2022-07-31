@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c12933f-ec2a-4ca0-a96d-81cc80af730f" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/Envio.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioAvion.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioBarco.java" afterDir="false" />
@@ -12,6 +13,10 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaBarco.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaEnvio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" afterDir="false" />
+>>>>>>> respaldo
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +55,19 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< HEAD
     "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "230",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "last_opened_file_path": "C:/Users/Miller/IdeaProjects/ExamenFinalGrupoTHeCoffee",
+=======
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
+    "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "345",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "145",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+>>>>>>> respaldo
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
