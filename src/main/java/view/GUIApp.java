@@ -11,6 +11,7 @@ public class GUIApp extends JFrame {
     private JPanel PanelAppPrincipal;
     private JLabel mensajeDeTipoDeEnvio;
     private JPanel panelMensaje;
+    private JPanel topPanel;
 
     private GUIContainer guiContainer;
 
@@ -29,6 +30,10 @@ public class GUIApp extends JFrame {
     public GUIApp(){
 
         PanelAppPrincipal.setLayout(new BorderLayout());
+
+        PanelAppPrincipal.add(topPanel,BorderLayout.NORTH);
+        PanelAppPrincipal.add(PanelAppPrincipal,BorderLayout.CENTER);
+        PanelAppPrincipal.add(panelMensaje,BorderLayout.SOUTH);
 
 
         setContentPane( PanelAppPrincipal);
