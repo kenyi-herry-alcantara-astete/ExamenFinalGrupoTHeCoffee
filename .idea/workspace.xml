@@ -6,13 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8c12933f-ec2a-4ca0-a96d-81cc80af730f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/EnvioTierraButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/EnvioTierraButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIApp.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GUIApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogisticaAire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogisticaAvion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogisticaEnvio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogisticaEnvio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LogisticaTierra.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LogisticaBarco.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/memento/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ContainerCaretaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/memento/ContainerCaretaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIContainer.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIContainer.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GUIContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Item.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -63,23 +64,38 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/view" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="App" />
-      <module name="ExamenFinalGrupoTHeCoffee" />
+  <component name="RunManager" selected="Application.GUIApp">
+    <configuration name="GUIApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="view.GUIApp" />
+      <module name="ExamenParcial" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="controller.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="controller.App" />
+      <module name="ExamenParcial" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.GUIApp" />
+        <item itemvalue="Application.controller.App" />
       </list>
     </recent_temporary>
   </component>
