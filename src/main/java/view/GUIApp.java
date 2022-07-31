@@ -6,14 +6,19 @@ import java.awt.event.ActionListener;
 
 public class GUIApp extends JFrame {
     private JButton enviarPorTierraButton;
-    private JButton enviarPorAireButton;
     private JButton enlistarItemsButton;
     private JPanel PanelAppPrincipal;
+    private JLabel mensajeDeTipoDeEnvio;
+    private JPanel panelMensaje;
 
     private GUIContainer guiContainer;
 
     public static void main(String[] args) {
-        GUIApp guiApp = new GUIApp();
+
+        //Inicio de app
+        new GUIApp();
+
+
     }
 
     public GUIApp(){
