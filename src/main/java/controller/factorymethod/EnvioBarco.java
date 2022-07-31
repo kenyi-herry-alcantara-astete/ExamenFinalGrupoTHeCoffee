@@ -3,9 +3,9 @@ package controller.factorymethod;
 public class EnvioBarco implements Envio{
 
     @Override
-    public void enviar() {
+    public String enviar() {
 
         System.out.println("Enviado por Barco");
-
+        return "Enviado por Barco";
     }
 }
