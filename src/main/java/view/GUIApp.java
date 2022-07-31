@@ -1,6 +1,7 @@
 package view;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -16,12 +17,19 @@ public class GUIApp extends JFrame {
     public static void main(String[] args) {
 
         //Inicio de app
-        new GUIApp();
+        GUIApp guiApp= new GUIApp();
 
+
+        String mensaje = "HOla";
+        //Mostrando mensaje de envio
+        guiApp.mensajeDeTipoDeEnvio.setText(mensaje);
 
     }
 
     public GUIApp(){
+
+        PanelAppPrincipal.setLayout(new BorderLayout());
+
 
         setContentPane( PanelAppPrincipal);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,6 +40,12 @@ public class GUIApp extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 guiContainer = new GUIContainer();
+            }
+        });
+        enviarPorTierraButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
             }
         });
     }
