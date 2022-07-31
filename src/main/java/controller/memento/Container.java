@@ -74,7 +74,8 @@ public class Container {
     //Crea una copia
     public Snapshot createSnapshot( ){
         showINTHeConsole();
-        System.out.println("Snapshot creado");
+        System.out.println("Snapshot creado:");
+        showINTHeConsole();
         return new Snapshot(this.items,this.costoTotal,this.pesoTotal);
     }
 
@@ -85,21 +86,8 @@ public class Container {
             this.setItems(snapshot.items);
             this.setCostoTotal(snapshot.costoTotal);
             this.setPesoTotal(snapshot.pesoTotal);
-            System.out.println("----------------Especial--------------------------------");
-            int index = 0;
-            for (Item i:
-                    snapshot.items) {
-                System.out.println((index+1)+")");
-                System.out.println("Name:"+i.getName());
-                System.out.println("Peso:"+i.getPeso());
-                System.out.println("Costo:"+i.getCosto());
-            index++;
-            }
-            System.out.println("------------------------------------------------");
-
+            System.out.println("Restaurando:");
             showINTHeConsole();
-            System.out.println("Restaurado "+"Consto total:"+snapshot.getCostoTotal());
-            System.out.println("Costo ac:"+this.getCostoTotal());
         }else{
             System.out.println("No hay historial de donde recuperar!");
         }
