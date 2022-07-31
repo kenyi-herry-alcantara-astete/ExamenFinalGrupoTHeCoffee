@@ -27,6 +27,9 @@ public class GUIApp extends JFrame {
         //Tipo de envío con el patron factory.method
         LogisticaAvion logisticaAvion = new LogisticaAvion();
 
+        //Tipo de paquete
+
+
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
         Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
 
