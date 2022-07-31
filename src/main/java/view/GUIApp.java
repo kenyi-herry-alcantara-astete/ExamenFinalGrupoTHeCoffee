@@ -30,13 +30,10 @@ public class GUIApp extends JFrame {
     public GUIApp(){
 
         PanelAppPrincipal.setLayout(new BorderLayout());
-
         PanelAppPrincipal.add(topPanel,BorderLayout.NORTH);
         PanelAppPrincipal.add(PanelAppPrincipal,BorderLayout.CENTER);
         PanelAppPrincipal.add(panelMensaje,BorderLayout.SOUTH);
 
-
-        setContentPane( PanelAppPrincipal);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(250,100,720,520);
         setBounds(250,100,820,620);
