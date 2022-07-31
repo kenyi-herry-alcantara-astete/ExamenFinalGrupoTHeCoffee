@@ -1,3 +1,5 @@
+package view;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +12,12 @@ public class GUIApp extends JFrame {
 
     private GUIContainer guiContainer;
 
+    public static void main(String[] args) {
+        GUIApp guiApp = new GUIApp();
+    }
+
     public GUIApp(){
+
         setContentPane( PanelAppPrincipal);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(250,100,720,520);

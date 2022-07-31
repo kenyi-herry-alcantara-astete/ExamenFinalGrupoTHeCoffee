@@ -1,7 +1,12 @@
+package view;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import controller.memento.Container;
+import controller.memento.ContainerCaretaker;
+import model.Item;
 
 public class GUIContainer extends JFrame {
     private JTextField textFieldName;
@@ -88,7 +93,7 @@ public class GUIContainer extends JFrame {
             JLabel labelCostoItem = new JLabel();
             JLabel labelPesoItem=new JLabel();
             JButton buttonDeleteItem = new JButton();
-            buttonDeleteItem.setText("Delete Item");
+            buttonDeleteItem.setText("Delete");
             buttonDeleteItem.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -117,7 +122,7 @@ public class GUIContainer extends JFrame {
             PanelOneItem.add(labelPesoItem);
             PanelOneItem.add(buttonDeleteItem);
 
-            //Agregando el panel Item al PanelShowItems
+            //Agregando el panel model.memento.Item al PanelShowItems
             PanelShowItems.add(PanelOneItem);
             PanelShowItems.revalidate();
             PanelShowItems.repaint();

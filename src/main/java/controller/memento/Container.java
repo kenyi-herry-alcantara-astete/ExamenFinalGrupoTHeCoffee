@@ -1,6 +1,6 @@
+package controller.memento;
 
-import org.jetbrains.annotations.Contract;
-import org.jetbrains.annotations.NotNull;
+import model.Item;
 
 import java.util.ArrayList;
 
@@ -56,7 +56,7 @@ public class Container {
         private ArrayList<Item> items;
         private int costoTotal;
         private int pesoTotal;
-        Snapshot( ArrayList<Item> items,int costoTotal,int pesoTotal){
+        Snapshot(ArrayList<Item> items, int costoTotal, int pesoTotal){
             this.costoTotal=costoTotal;
             this.items = new ArrayList<>(items);
             this.pesoTotal=pesoTotal;
