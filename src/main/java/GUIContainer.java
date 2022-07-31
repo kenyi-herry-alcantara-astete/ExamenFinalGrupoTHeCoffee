@@ -32,7 +32,7 @@ public class GUIContainer extends JFrame {
         FinishedButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //
+                setVisible(false);
             }
         });
 
@@ -61,6 +61,7 @@ public class GUIContainer extends JFrame {
                 showItemsGui();
             }
         });
+
     }
 
     private void showItemsGui(){
@@ -132,5 +133,9 @@ public class GUIContainer extends JFrame {
         //Elimino el item
         container.removeItem(idRelative);
         showItemsGui();
+    }
+
+    public Container getContainer() {
+        return container;
     }
 }
