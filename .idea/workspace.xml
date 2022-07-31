@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8c12933f-ec2a-4ca0-a96d-81cc80af730f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIApp.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +47,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW": "false",
     "UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH": "345",
-    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "385",
+    "UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH": "145",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "project.structure.last.edited": "Modules",
