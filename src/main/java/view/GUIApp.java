@@ -1,5 +1,8 @@
 package view;
 
+import controller.factorymethod.Envio;
+import controller.factorymethod.LogisticaAvion;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,10 +24,14 @@ public class GUIApp extends JFrame {
         //Inicio de app
         GUIApp guiApp= new GUIApp();
 
+        //Tipo de envío con el patron factory.method
+        LogisticaAvion logisticaAvion = new LogisticaAvion();
 
-        String mensaje = "HOla";
-        //Mostrando mensaje de envio
-        guiApp.mensajeDeTipoDeEnvio.setText(mensaje);
+        //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
+        Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
+
+        //Mostrando mensaje de envío
+        guiApp.mensajeDeTipoDeEnvio.setText(envio.enviar());
 
     }
 
