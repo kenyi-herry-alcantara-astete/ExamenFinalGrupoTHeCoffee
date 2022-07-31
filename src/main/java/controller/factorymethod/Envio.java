@@ -1,6 +1,6 @@
 package controller.factorymethod;
 
 public interface Envio {
-    void enviar();
+    String enviar();
 }
 
