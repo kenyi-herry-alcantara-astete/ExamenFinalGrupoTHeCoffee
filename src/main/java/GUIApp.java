@@ -3,8 +3,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class GUIApp extends JFrame {
-    private JButton enviarPorTierraButton;
-    private JButton enviarPorAireButton;
+    public JButton enviarPorTierraButton;
+    public JButton enviarPorAireButton;
     private JButton enlistarItemsButton;
     private JPanel PanelAppPrincipal;
 
@@ -16,6 +16,7 @@ public class GUIApp extends JFrame {
         setBounds(250,100,720,520);
         setBounds(250,100,820,620);
         setVisible(true);
+
         enlistarItemsButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -23,4 +24,5 @@ public class GUIApp extends JFrame {
             }
         });
     }
+
 }
