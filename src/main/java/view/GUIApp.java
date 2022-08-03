@@ -1,5 +1,6 @@
 package view;
 
+import controller.facade.Facade;
 import controller.factorymethod.Envio;
 import controller.factorymethod.LogisticaAvion;
 
@@ -7,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileNotFoundException;
 
 public class GUIApp extends JFrame {
     private JButton enviar;
@@ -20,7 +22,10 @@ public class GUIApp extends JFrame {
     private GUIContainer guiContainer;
 
     //Tipo de envío con el patron factory.method
-    private  LogisticaAvion logisticaAvion = new LogisticaAvion();
+    private final LogisticaAvion logisticaAvion = new LogisticaAvion();
+    // Facade para guardar datos del container
+    private final Facade facade = new Facade();
+
     private static GUIApp guiApp;
 
     public static void main(String[] args) {
@@ -43,22 +48,21 @@ public class GUIApp extends JFrame {
         setBounds(250,100,720,520);
         setBounds(250,100,820,620);
         setVisible(true);
-        enlistarItemsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                guiContainer = new GUIContainer();
-            }
-        });
-        enviar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
+        enlistarItemsButton.addActionListener(e -> guiContainer = new GUIContainer());
+        enviar.addActionListener(e -> {
+            try {
                 enviarContainer();
+            } catch (FileNotFoundException ex) {
+                throw new RuntimeException(ex);
             }
         });
     }
-    private void enviarContainer(){
+    private void enviarContainer() throws FileNotFoundException {
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
         Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
+
+        // Guardamos en la base de datos el container
+        facade.saveContainer(guiApp.guiContainer.getContainer());
 
         //Mostrando mensaje de envío
         guiApp.mensajeDeTipoDeEnvio.setText(envio.enviar());
