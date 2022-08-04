@@ -168,7 +168,7 @@ public class ContainerCaretaker {
 
 ###### El diagrama de clase completo es:
 
-![memento](./src/main/resources/ExamenFinal.drawioDiagramaDeClase.png)
+![memento](./src/main/resources/ExamenFinal.drawio.png)
 
 #### 7. Pruebas del sistema  
 >Test de restauración de historial:
