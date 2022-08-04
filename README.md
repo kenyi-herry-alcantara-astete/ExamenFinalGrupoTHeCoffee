@@ -170,7 +170,7 @@ public class ContainerCaretaker {
 Agregaremos tres ítems al container. Luego crearemos una Snapshot para ese estado del container.
 Luego eliminaremos un ítem y diremos que fue el ítem equivocado. Pero como tenemos la posibilidad de regresar al historial anterior. Ejecutaremos la restauración y verificaremos que el ítem eliminado aún está en el container. 
 
-```java
+``` java
 class ContainerTest {
    @Test
    void restore() {
@@ -200,7 +200,8 @@ class ContainerTest {
    }
 }
 
-```
+``` 
+
 #### 9. Programación GUI  
 >GUIApp:
 >Esta clase define la ventana principal donde se realiza el 50% de la funcionalidad total del software, presenta dos botones
