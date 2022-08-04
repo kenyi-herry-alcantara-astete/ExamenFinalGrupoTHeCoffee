@@ -1,14 +1,11 @@
 package view;
 
-import controller.facade.Facade;
+import controller.facade.Server;
 import controller.factorymethod.Envio;
 import controller.factorymethod.LogisticaAvion;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
 
 public class GUIApp extends JFrame {
     private JButton enviar;
@@ -23,8 +20,8 @@ public class GUIApp extends JFrame {
 
     //Tipo de envío con el patron factory.method
     private final LogisticaAvion logisticaAvion = new LogisticaAvion();
-    // Facade para guardar datos del container
-    private final Facade facade = new Facade();
+    // Servidor para guardar datos del container
+    private final Server server = new Server();
 
     private static GUIApp guiApp;
 
@@ -49,20 +46,14 @@ public class GUIApp extends JFrame {
         setBounds(250,100,820,620);
         setVisible(true);
         enlistarItemsButton.addActionListener(e -> guiContainer = new GUIContainer());
-        enviar.addActionListener(e -> {
-            try {
-                enviarContainer();
-            } catch (FileNotFoundException ex) {
-                throw new RuntimeException(ex);
-            }
-        });
+        enviar.addActionListener(e -> enviarContainer());
     }
-    private void enviarContainer() throws FileNotFoundException {
+    private void enviarContainer() {
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
         Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
 
         // Guardamos en la base de datos el container
-        facade.saveContainer(guiApp.guiContainer.getContainer());
+        server.saveContainer(guiApp.guiContainer.getContainer());
 
         //Mostrando mensaje de envío
         guiApp.mensajeDeTipoDeEnvio.setText(envio.enviar());

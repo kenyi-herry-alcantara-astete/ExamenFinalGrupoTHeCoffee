@@ -6,8 +6,8 @@ public class Json {
     public Json(String json){
         this.json = json;
     }
-    public String getJson() {
+
+    public String toString() {
         return json;
     }
-
 }

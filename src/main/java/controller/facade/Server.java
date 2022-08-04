@@ -1,25 +1,21 @@
 package controller.facade;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.PrintWriter;
+import controller.memento.Container;
 
 public class Server {
-    public void post(Json json) throws FileNotFoundException {
-        PrintWriter printWriter = new PrintWriter("database.json");
-        printWriter.write(json.getJson());
-        printWriter.close();
-    }
+    /**
+     * postcondición:
+     * Si container es diferente de null y el número de items almacenados en container es mayor a 0:
+     * Guarda datos de container en base de datos
+     */
+    public void saveContainer(Container container)  {
+        if(container != null && container.getItems().size() > 0){
+            // Datos de container en formato json
+            Json containerJson = Converter.coverterJson(container);
 
-    public Json get(String id){
-        return null;
-    }
-
-    public void delete(String id){
-
-    }
-
-    public void update(String id){
-
+            // Guardamos los datos del contenedor
+            Fetch fetch = new Fetch();
+            fetch.post("containers.txt", containerJson);
+        }
     }
 }
