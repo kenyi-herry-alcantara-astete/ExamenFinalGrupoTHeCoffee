@@ -4,8 +4,6 @@ import model.Item;
 
 import java.util.ArrayList;
 
-
-
 public class Container {
 
     private ArrayList<Item> items = new ArrayList<>();
@@ -45,12 +43,6 @@ public class Container {
         return costoTotal;
     }
 
-    //Interfaz memento
-    interface Memento{
-        public int getPesoTotal();
-        public int getCostoTotal();
-    }
-
     //Clase interna
     class Snapshot implements Memento{
         private ArrayList<Item> items;
@@ -65,7 +57,6 @@ public class Container {
         public int getCostoTotal() {
             return costoTotal;
         }
-
         public int getPesoTotal() {
             return pesoTotal;
         }
