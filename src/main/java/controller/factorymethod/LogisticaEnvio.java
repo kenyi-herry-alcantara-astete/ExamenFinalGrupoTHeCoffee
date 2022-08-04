@@ -1,6 +1,9 @@
 package controller.factorymethod;
 import controller.memento.Container;
 
+//clase que hace las veces de factory
+
+
 public abstract class LogisticaEnvio {
 
 
@@ -15,6 +18,7 @@ public abstract class LogisticaEnvio {
             return logisticaAvion.createEnvio();
         }
     }
+
 
     public abstract Envio createEnvio();
 }

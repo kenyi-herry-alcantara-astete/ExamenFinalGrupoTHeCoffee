@@ -26,6 +26,9 @@ public class Container {
         items.remove(indexRelative);
     }
 
+    public void setPesoTotal(int pesoTotal){
+        this.pesoTotal = pesoTotal;
+    }
     public int getPesoTotal() {
         return pesoTotal;
     }
