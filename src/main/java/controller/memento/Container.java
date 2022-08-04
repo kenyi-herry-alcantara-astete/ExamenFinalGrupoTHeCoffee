@@ -14,6 +14,7 @@ public class Container {
         return items;
     }
 
+    //
     public void addItem(String name,int costo,int peso){
         items.add(new Item(name,costo,peso));
         this.costoTotal=this.costoTotal+costo;
@@ -26,22 +27,19 @@ public class Container {
         items.remove(indexRelative);
     }
 
+    //Precondition:
+    //Postcondition:
     public void setPesoTotal(int pesoTotal){
         this.pesoTotal = pesoTotal;
     }
     public int getPesoTotal() {
         return pesoTotal;
     }
-
-    public int getCostoTotal() {
-        return costoTotal;
-    }
-
     //Clase interna
-     class Snapshot implements Memento{
-        private ArrayList<Item> items;
-        private int costoTotal;
-        private int pesoTotal;
+     static class Snapshot implements Memento{
+        private final ArrayList<Item> items;
+        private final int costoTotal;
+        private final int pesoTotal;
         Snapshot(ArrayList<Item> items, int costoTotal, int pesoTotal){
             this.costoTotal=costoTotal;
             this.items = new ArrayList<>(items);
