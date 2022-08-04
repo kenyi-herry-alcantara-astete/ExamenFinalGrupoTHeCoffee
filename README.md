@@ -164,7 +164,78 @@ public class ContainerCaretaker {
 }
 
 ```
+>Factory-method
 
+![memento](./src/main/resources/FactoryUML.png)
+
+> Clase LogisticsShipping , se encarga de verificar si el paquete sera por avion o barco
+```java
+public abstract class LogisticsShipping {
+
+   //Precondición: container.getPesoTotal() > 0
+   //Postcondición: retornar un tipo de envio.
+   public Shipping getShipping(Container container){
+
+       if(container.getPesoTotal()>1000){
+           ShipLogistics shipLogistics = new ShipLogistics();
+           return shipLogistics.createShipping();
+       }
+       else{
+           PlaneLogistics planeLogistics = new PlaneLogistics();
+           return planeLogistics.createShipping();
+       }
+   }
+
+   public abstract Shipping createShipping();
+}
+```
+>PlaneLogistics y ShipLogistics clases encargadas de separar las responsabilidades
+```java
+//Clase encargada de la Logística de vuelo
+public class PlaneLogistics extends LogisticsShipping{
+   public Shipping createShipping(){
+       return new PlaneShipping();
+   }
+}
+
+//clase encargada de la logística de barco
+
+public class ShipLogistics extends LogisticsShipping {
+   @Override
+   public Shipping createShipping(){
+       return new ShipShipping();
+   }
+}
+```
+>Shipping Interfaz encarga de separar los algoritmos si un caso los hubiese por ejemplo algoritmo de la ruta mas corta
+```java
+//interfaz envio defino los tipos de envios que se puedan realizar
+public interface Shipping {
+   String ShippingType();
+}
+
+//Clases encargada de la Lógica del Envio por Aire
+public class PlaneShipping implements Shipping {
+   @Override
+   public String ShippingType() {
+
+       System.out.println("Enviado por Aire");
+       return "Enviado por Aire";
+   }
+}
+
+//Clases encargada de la Lógica del Envio por Barco
+public class ShipShipping implements Shipping {
+
+   @Override
+   public String ShippingType() {
+
+       System.out.println("Enviado por Barco");
+       return "Enviado por Barco";
+   }
+}
+
+```
 
 ###### El diagrama de clase completo es:
 
