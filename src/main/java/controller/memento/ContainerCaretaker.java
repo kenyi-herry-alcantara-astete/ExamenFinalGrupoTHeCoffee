@@ -8,7 +8,10 @@ public class ContainerCaretaker {
         snapshotStack.push(snapshot);
     }
     public Container.Snapshot getRecentSnapshot(){
-        Container.Snapshot aux= snapshotStack.pop();
+        if(snapshotStack.empty()){
+            return null;
+        }
+        Container.Snapshot aux = snapshotStack.pop();
         return aux;
     }
 }
