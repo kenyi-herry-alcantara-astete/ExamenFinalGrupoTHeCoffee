@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="" />
+    <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/PlaneLogistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_4_2022_12_02_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_4_2022_12_02_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_4_22__1_47_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_8_4_22__1_47_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/Envio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/Shipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioAvion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/PlaneShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioBarco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/ShipShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaAvion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaBarco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/ShipLogistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaEnvio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticsShipping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LogisticaEnvioTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LogisticaEnvioTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,15 +50,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Miller/IdeaProjects/ExamenFinalGrupoTHeCoffee",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -62,20 +77,13 @@
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="view.GUIApp" />
-      <module name="ExamenFinalGrupoTHeCoffee" />
+      <module name="ExamenFinalGrupoTHeCoffee2" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="controller.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="controller.App" />
-      <module name="ExamenParcial" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,6 +106,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogisticaEnvioTest.TestgetEnvio (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamenFinalGrupoTHeCoffee2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LogisticaEnvioTest" />
+      <option name="METHOD_NAME" value="TestgetEnvio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LogisticaEnvioTest.TestgetEnvio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ExamenFinalGrupoTHeCoffee" />
       <option name="PACKAGE_NAME" value="" />
@@ -111,10 +129,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.GUIApp" />
+        <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio (1)" />
         <item itemvalue="JUnit.ContainerTest" />
         <item itemvalue="JUnit.LogisticaEnvioTest" />
         <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio" />
-        <item itemvalue="Application.controller.App" />
       </list>
     </recent_temporary>
   </component>
@@ -127,6 +145,7 @@
       <option name="presentableId" value="Default" />
       <updated>1659131865061</updated>
       <workItem from="1659239310109" duration="884000" />
+      <workItem from="1659605211822" duration="867000" />
     </task>
     <servers />
   </component>

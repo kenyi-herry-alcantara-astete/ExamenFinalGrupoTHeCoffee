@@ -1,7 +1,7 @@
 package controller.factorymethod;
 
 //Clases encargada de la Logica del Envio por Aire
-public class EnvioAvion implements Envio {
+public class PlaneShipping implements Shipping {
     @Override
     public String enviar() {
 

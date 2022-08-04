@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "name": "h",
+      "costo": 45,
+      "peso": 65
+    },
+    {
+      "name": "op",
+      "costo": 45,
+      "peso": 30
+    }
+  ],
+  "costoTotal": 90,
+  "pesoTotal": 95
+},{
+  "items": [
+    {
+      "name": "hg",
+      "costo": 45,
+      "peso": 65
+    },
+    {
+      "name": "iu",
+      "costo": 87,
+      "peso": 95
+    }
+  ],
+  "costoTotal": 132,
+  "pesoTotal": 160
+},
