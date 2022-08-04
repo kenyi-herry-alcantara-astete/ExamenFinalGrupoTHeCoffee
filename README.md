@@ -272,6 +272,7 @@ class ContainerTest {
 }
 
 ```
+![memento](./src/main/resources/pruebaMemento.png)
 >Test de Logística de envio
 
 Agregamos peso al container y usando getEnvio para verificar el tipo de envio le asignamos a assertEquals para poder hacer la respectiva prueba correspondiente ya sea si es por avión o Barco
@@ -305,4 +306,4 @@ public class LogisticaEnvioTest extends LogisticsShipping {
 ```
 
 
-![memento](./src/main/resources/pruebaMemento.png)
+
