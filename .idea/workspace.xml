@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LogisticaEnvioTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/memento/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/memento/Container.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +75,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUIApp">
+  <component name="RunManager" selected="JUnit.LogisticaEnvioTest">
     <configuration name="GUIApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -96,8 +98,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogisticaEnvioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamenFinalGrupoTHeCoffee" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LogisticaEnvioTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogisticaEnvioTest.TestgetEnvio" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamenFinalGrupoTHeCoffee" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LogisticaEnvioTest" />
+      <option name="METHOD_NAME" value="TestgetEnvio" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LogisticaEnvioTest" />
+        <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio" />
         <item itemvalue="Application.GUIApp" />
         <item itemvalue="Application.controller.App" />
       </list>
@@ -106,12 +129,13 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8c12933f-ec2a-4ca0-a96d-81cc80af730f" name="Changes" comment="" />
+      <changelist id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="" />
       <created>1659131865061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1659131865061</updated>
       <workItem from="1659239310109" duration="884000" />
+      <workItem from="1659586485048" duration="2500000" />
     </task>
     <servers />
   </component>

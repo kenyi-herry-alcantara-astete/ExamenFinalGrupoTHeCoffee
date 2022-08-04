@@ -28,7 +28,7 @@ public class Container {
     private void setCostoTotal(int costoTotal){
         this.costoTotal = costoTotal;
     }
-    private void setPesoTotal(int pesoTotal){
+    public void setPesoTotal(int pesoTotal){
         this.pesoTotal = pesoTotal;
     }
     public void removeItem (int indexRelative){
