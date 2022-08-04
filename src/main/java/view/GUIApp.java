@@ -52,7 +52,7 @@ public class GUIApp extends JFrame {
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
         Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
 
-        // Guardamos en la base de datos el container
+        // Guardamos datos del container en base de datos
         server.saveContainer(guiApp.guiContainer.getContainer());
 
         //Mostrando mensaje de envío

@@ -3,12 +3,15 @@ package controller.facade;
 import java.io.*;
 
 public class Fetch {
-
-    public void post(String direction, Json json) {
+    /**
+     *  Postcondición:
+     *  Guarda datos en formato json en una dirección dada.
+     */
+    public static void post(String direction, Format format) {
         try {
             File file = new File(direction);
             FileWriter fileWriter = new FileWriter(file, true);
-            fileWriter.write(json.toString());
+            fileWriter.write(format.getStringFormat());
             fileWriter.write(",");
             fileWriter.close();
         } catch (IOException e) {
@@ -16,7 +19,11 @@ public class Fetch {
         }
     }
 
-    public Json get(String direction) {
+    /**
+     *  Postcondición:
+     *  Obtiene datos en formato json de una dirección dada.
+     */
+    public static JSON get(String direction) {
         try {
             // Variable para almacenar data
             StringBuilder data = new StringBuilder();
@@ -33,13 +40,17 @@ public class Fetch {
             fileReader.close();
 
             // retorna data en formato json
-            return new Json(data.toString());
+            return new JSON(data.toString());
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    public void delete(String direction) {
+    /**
+     *  Postcondición:
+     *  Elimina datos de una dirección dada.
+     */
+    public static void delete(String direction) {
         File file = new File(direction);
         if (file.delete()) {
             System.out.println("Archivo " + direction + " eliminado");
@@ -48,10 +59,14 @@ public class Fetch {
         }
     }
 
-    public void update(String direction, Json json) {
+    /**
+     *  Postcondición:
+     *  Actualiza datos en formato json de una dirección dada.
+     */
+    public static void put(String direction, Format format) {
         try {
             FileWriter fileWriter = new FileWriter(direction);
-            fileWriter.write(json.toString());
+            fileWriter.write(format.getStringFormat());
             fileWriter.write(",");
             fileWriter.close();
         } catch (IOException e) {

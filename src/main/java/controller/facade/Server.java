@@ -6,16 +6,15 @@ public class Server {
     /**
      * postcondición:
      * Si container es diferente de null y el número de items almacenados en container es mayor a 0:
-     * Guarda datos de container en base de datos
+     * Guarda datos de container en formato json en el archivo database.txt
      */
     public void saveContainer(Container container)  {
         if(container != null && container.getItems().size() > 0){
             // Datos de container en formato json
-            Json containerJson = Converter.coverterJson(container);
+            JSON containerJson = Converter.coverterJson(container);
 
             // Guardamos los datos del contenedor
-            Fetch fetch = new Fetch();
-            fetch.post("containers.txt", containerJson);
+            Fetch.post("database.txt", containerJson);
         }
     }
 }
