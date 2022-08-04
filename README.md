@@ -162,7 +162,78 @@ public class ContainerCaretaker {
 
 ```
 
+>Factory-method
 
+![memento](./src/main/resources/FactoryUML.png)
+
+> Clase LogisticsShipping , se encarga de verificar si el paquete sera por avion o barco
+```java
+public abstract class LogisticsShipping {
+
+   //Precondición: container.getPesoTotal() > 0
+   //Postcondición: retornar un tipo de envio.
+   public Shipping getShipping(Container container){
+
+       if(container.getPesoTotal()>1000){
+           ShipLogistics shipLogistics = new ShipLogistics();
+           return shipLogistics.createShipping();
+       }
+       else{
+           PlaneLogistics planeLogistics = new PlaneLogistics();
+           return planeLogistics.createShipping();
+       }
+   }
+
+   public abstract Shipping createShipping();
+}
+```
+>PlaneLogistics y ShipLogistics clases encargadas de separar las responsabilidades
+```java
+//Clase encargada de la Logística de vuelo
+public class PlaneLogistics extends LogisticsShipping{
+   public Shipping createShipping(){
+       return new PlaneShipping();
+   }
+}
+
+//clase encargada de la logística de barco
+
+public class ShipLogistics extends LogisticsShipping {
+   @Override
+   public Shipping createShipping(){
+       return new ShipShipping();
+   }
+}
+```
+>Shipping Interfaz encarga de separar los algoritmos si un caso los hubiese por ejemplo algoritmo de la ruta mas corta
+```java
+//interfaz envio defino los tipos de envios que se puedan realizar
+public interface Shipping {
+   String ShippingType();
+}
+
+//Clases encargada de la Lógica del Envio por Aire
+public class PlaneShipping implements Shipping {
+   @Override
+   public String ShippingType() {
+
+       System.out.println("Enviado por Aire");
+       return "Enviado por Aire";
+   }
+}
+
+//Clases encargada de la Lógica del Envio por Barco
+public class ShipShipping implements Shipping {
+
+   @Override
+   public String ShippingType() {
+
+       System.out.println("Enviado por Barco");
+       return "Enviado por Barco";
+   }
+}
+
+```
 #### 7. Pruebas del sistema  
 >Test de restauración de historial:
 
@@ -196,6 +267,37 @@ class ContainerTest {
 
        //Verificando que el item 2 aún está en la lista
        assertEquals("lavadora",container.getItems().get(1).getName());
+   }
+}
+
+```
+>Test de Logística de envio
+
+Agregamos peso al container y usando getEnvio para verificar el tipo de envio le asignamos a assertEquals para poder hacer la respectiva prueba correspondiente ya sea si es por avión o Barco
+
+
+```java
+public class LogisticaEnvioTest extends LogisticsShipping {
+
+   @Test
+   public void TestgetEnvio(){
+       Container container = new Container();
+       //se almacena un peso total de 4200
+       container.setPesoTotal(4200);
+       Shipping envio = getEnvio(container);
+       assertEquals( "Enviado por Barco",envio.enviar());
+
+       Container container2 = new Container();
+       //se almacena un peso total de 800
+       container2.setPesoTotal(800);
+       Shipping envio2 = getEnvio(container2);
+       assertEquals("Enviado por Aire",envio2.enviar());
+
+   }
+
+   @Override
+   public Shipping createEnvio() {
+       return null;
    }
 }
 
