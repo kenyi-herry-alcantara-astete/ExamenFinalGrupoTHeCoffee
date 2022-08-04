@@ -1,13 +1,13 @@
 import static org.junit.jupiter.api.Assertions.*;
-
+import org.junit.jupiter.api.Test;
 class ContainerTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void createSnapshot() {
 
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void restore() {
     }
 }

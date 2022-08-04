@@ -4,8 +4,6 @@ import model.Item;
 
 import java.util.ArrayList;
 
-
-
 public class Container {
 
     private ArrayList<Item> items = new ArrayList<>();
@@ -22,15 +20,6 @@ public class Container {
         this.pesoTotal = this.pesoTotal+peso;
     }
 
-    private void setItems(ArrayList items){
-        this.items = items;
-    }
-    private void setCostoTotal(int costoTotal){
-        this.costoTotal = costoTotal;
-    }
-    public void setPesoTotal(int pesoTotal){
-        this.pesoTotal = pesoTotal;
-    }
     public void removeItem (int indexRelative){
         this.costoTotal=this.costoTotal- this.items.get(indexRelative).getCosto();
         this.pesoTotal = this.pesoTotal-this.items.get(indexRelative).getPeso();
@@ -43,12 +32,6 @@ public class Container {
 
     public int getCostoTotal() {
         return costoTotal;
-    }
-
-    //Interfaz memento
-    interface Memento{
-        public int getPesoTotal();
-        public int getCostoTotal();
     }
 
     //Clase interna
@@ -65,7 +48,6 @@ public class Container {
         public int getCostoTotal() {
             return costoTotal;
         }
-
         public int getPesoTotal() {
             return pesoTotal;
         }
@@ -74,7 +56,8 @@ public class Container {
     //Crea una copia
     public Snapshot createSnapshot( ){
         showINTHeConsole();
-        System.out.println("Snapshot creado");
+        System.out.println("Snapshot creado:");
+        showINTHeConsole();
         return new Snapshot(this.items,this.costoTotal,this.pesoTotal);
     }
 
@@ -82,24 +65,11 @@ public class Container {
     public void restore(Snapshot snapshot){
         //Verificando si existe un historial guardado
         if (snapshot != null){
-            this.setItems(snapshot.items);
-            this.setCostoTotal(snapshot.costoTotal);
-            this.setPesoTotal(snapshot.pesoTotal);
-            System.out.println("----------------Especial--------------------------------");
-            int index = 0;
-            for (Item i:
-                    snapshot.items) {
-                System.out.println((index+1)+")");
-                System.out.println("Name:"+i.getName());
-                System.out.println("Peso:"+i.getPeso());
-                System.out.println("Costo:"+i.getCosto());
-            index++;
-            }
-            System.out.println("------------------------------------------------");
-
+            this.items=snapshot.items;
+            this.costoTotal=snapshot.costoTotal;
+            this.pesoTotal = snapshot.pesoTotal;
+            System.out.println("Restaurando:");
             showINTHeConsole();
-            System.out.println("Restaurado "+"Consto total:"+snapshot.getCostoTotal());
-            System.out.println("Costo ac:"+this.getCostoTotal());
         }else{
             System.out.println("No hay historial de donde recuperar!");
         }
