@@ -4,22 +4,22 @@ import controller.memento.Container;
 //clase que hace las veces de factory
 
 
-public abstract class LogisticaEnvio {
+public abstract class LogisticsShipping {
 
 
-    public Envio getEnvio(Container container){
+    public Shipping getEnvio(Container container){
         //Envio Barco mayor a 1000 , avion menor a 1000
         if(container.getPesoTotal()>1000){
-            LogisticaBarco logisticaBarco = new LogisticaBarco();
+            ShipLogistics logisticaBarco = new ShipLogistics();
             return logisticaBarco.createEnvio();
         }
         else{
-            LogisticaAvion logisticaAvion = new LogisticaAvion();
+            PlaneLogistics logisticaAvion = new PlaneLogistics();
             return logisticaAvion.createEnvio();
         }
     }
 
 
-    public abstract Envio createEnvio();
+    public abstract Shipping createEnvio();
 }
 

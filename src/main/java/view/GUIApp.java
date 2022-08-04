@@ -1,8 +1,8 @@
 package view;
 
 import controller.facade.Server;
-import controller.factorymethod.Envio;
-import controller.factorymethod.LogisticaAvion;
+import controller.factorymethod.Shipping;
+import controller.factorymethod.PlaneLogistics;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,7 @@ public class GUIApp extends JFrame {
     private GUIContainer guiContainer;
 
     //Tipo de envío con el patron factory.method
-    private final LogisticaAvion logisticaAvion = new LogisticaAvion();
+    private final PlaneLogistics logisticaAvion = new PlaneLogistics();
     // Servidor para guardar datos del container
     private final Server server = new Server();
 
@@ -50,7 +50,7 @@ public class GUIApp extends JFrame {
     }
     private void enviarContainer() {
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
-        Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
+        Shipping envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
 
         // Guardamos datos del container en base de datos
         server.saveContainer(guiApp.guiContainer.getContainer());
