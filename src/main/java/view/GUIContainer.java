@@ -18,7 +18,7 @@ public class GUIContainer extends JFrame {
     private JPanel PanelContainer;
     private JButton FinishedButton;
     private JButton deshacerButton;
-    Container container = new Container();
+    private Container container = new Container();
     ContainerCaretaker containerCaretaker = new ContainerCaretaker();
     public GUIContainer(){
         setContentPane(PanelContainer);

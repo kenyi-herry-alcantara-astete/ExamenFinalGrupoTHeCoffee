@@ -35,7 +35,7 @@ public class Container {
     }
 
     //Clase interna
-    class Snapshot implements Memento{
+     class Snapshot implements Memento{
         private ArrayList<Item> items;
         private int costoTotal;
         private int pesoTotal;
