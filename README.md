@@ -30,6 +30,8 @@ Imagenes que su empresa de logística está encargada en la  distribución de  d
 
 ![memento](./src/main/resources/memento.png)
 
+
+
 >Clase Item: define los ítems que se enlistan en un container
 ```java
 public class Item {
@@ -163,6 +165,10 @@ public class ContainerCaretaker {
 
 ```
 
+
+###### El diagrama de clase completo es:
+
+![memento](./src/main/resources/ExamenFinal.drawioDiagramaDeClase.png)
 
 #### 7. Pruebas del sistema  
 >Test de restauración de historial:
