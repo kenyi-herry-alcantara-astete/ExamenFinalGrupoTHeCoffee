@@ -26,6 +26,7 @@
             </constraints>
             <properties>
               <background color="-11708567"/>
+              <foreground color="-1"/>
             </properties>
             <border type="none"/>
             <children/>
@@ -36,7 +37,7 @@
             </constraints>
             <properties>
               <background color="-7498594"/>
-              <foreground color="-14934743"/>
+              <foreground color="-1"/>
               <text value="Finished"/>
             </properties>
           </component>
@@ -57,6 +58,7 @@
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="2" fill="0" indent="2" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <text value="Name producto:"/>
         </properties>
       </component>
@@ -65,6 +67,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="2" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <text value="Costo:"/>
         </properties>
       </component>
@@ -73,6 +76,7 @@
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="10" fill="0" indent="2" use-parent-layout="false"/>
         </constraints>
         <properties>
+          <foreground color="-1"/>
           <text value="Peso:"/>
         </properties>
       </component>
@@ -106,7 +110,7 @@
         </constraints>
         <properties>
           <background color="-7498594"/>
-          <foreground color="-14934743"/>
+          <foreground color="-1"/>
           <horizontalAlignment value="0"/>
           <horizontalTextPosition value="11"/>
           <margin top="0" left="0" bottom="0" right="0"/>
@@ -119,7 +123,7 @@
         </constraints>
         <properties>
           <background color="-7498594"/>
-          <foreground color="-14934743"/>
+          <foreground color="-1"/>
           <text value="Deshacer"/>
         </properties>
       </component>

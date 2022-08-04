@@ -83,7 +83,7 @@
                 </constraints>
                 <properties>
                   <background color="-7498594"/>
-                  <foreground color="-14934743"/>
+                  <foreground color="-1"/>
                   <horizontalTextPosition value="0"/>
                   <text value="Enlistar Items"/>
                   <verticalAlignment value="0"/>
@@ -106,7 +106,7 @@
                 </constraints>
                 <properties>
                   <background color="-7498594"/>
-                  <foreground color="-14934743"/>
+                  <foreground color="-1"/>
                   <text value="Enviar"/>
                 </properties>
               </component>
@@ -126,7 +126,7 @@
                 </constraints>
                 <properties>
                   <horizontalTextPosition value="0"/>
-                  <icon value="imagenes/tierra.png"/>
+                  <icon value="imagenes/avion.png"/>
                   <text value=""/>
                 </properties>
               </component>
