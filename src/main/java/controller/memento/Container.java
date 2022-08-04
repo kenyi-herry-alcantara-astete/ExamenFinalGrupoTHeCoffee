@@ -10,11 +10,12 @@ public class Container {
     private int costoTotal = 0;
     private int pesoTotal = 0;
 
+
     public ArrayList<Item> getItems() {
         return items;
     }
 
-    //
+
     public void addItem(String name,int costo,int peso){
         items.add(new Item(name,costo,peso));
         this.costoTotal=this.costoTotal+costo;
@@ -27,8 +28,6 @@ public class Container {
         items.remove(indexRelative);
     }
 
-    //Precondition:
-    //Postcondition:
     public void setPesoTotal(int pesoTotal){
         this.pesoTotal = pesoTotal;
     }
@@ -53,30 +52,36 @@ public class Container {
             return pesoTotal;
         }
     }
-
+    /**
+     *  PostCondition:
+     *  Crea una historial.
+     */
     //Crea una copia
     public Snapshot createSnapshot( ){
         showINTHeConsole();
-        System.out.println("Snapshot creado:");
+        System.out.println("\nSnapshot creado:");
         showINTHeConsole();
         return new Snapshot(this.items,this.costoTotal,this.pesoTotal);
     }
 
-    //Restaura de una copia
+
+    /**
+     *  PostCondition:
+     *  Restaura una historial anterior.
+     */
     public void restore(Snapshot snapshot){
         //Verificando si existe un historial guardado
         if (snapshot != null){
             this.items=snapshot.items;
             this.costoTotal=snapshot.costoTotal;
             this.pesoTotal = snapshot.pesoTotal;
-            System.out.println("Restaurando:");
+            System.out.println("\nRestaurando:");
             showINTHeConsole();
         }else{
             System.out.println("No hay historial de donde recuperar!");
         }
     }
     public void showINTHeConsole(){
-        System.out.println("-----------------------------------------------");
         int index = 0;
         for (Item item:
              this.items) {

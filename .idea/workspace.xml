@@ -6,11 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/Envio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/Envio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioAvion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioAvion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioBarco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/EnvioBarco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaBarco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaBarco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaEnvio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/factorymethod/LogisticaEnvio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/memento/Container.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/memento/Container.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/memento/ContainerCaretaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/memento/ContainerCaretaker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ContainerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ContainerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUIApp">
+  <component name="RunManager" selected="JUnit.ContainerTest">
     <configuration name="GUIApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -83,6 +81,15 @@
     <configuration name="controller.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="controller.App" />
       <module name="ExamenParcial" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContainerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ExamenFinalGrupoTHeCoffee" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ContainerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -108,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ContainerTest" />
         <item itemvalue="Application.GUIApp" />
         <item itemvalue="JUnit.LogisticaEnvioTest" />
         <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio" />
