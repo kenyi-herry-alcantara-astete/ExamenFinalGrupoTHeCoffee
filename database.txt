@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "name": "a",
+      "costo": 125,
+      "peso": 135
+    },
+    {
+      "name": "b",
+      "costo": 6153,
+      "peso": 51
+    },
+    {
+      "name": "c",
+      "costo": 42,
+      "peso": 6515
+    },
+    {
+      "name": "d",
+      "costo": 516,
+      "peso": 1531
+    }
+  ],
+  "costoTotal": 6836,
+  "pesoTotal": 8232
+},
