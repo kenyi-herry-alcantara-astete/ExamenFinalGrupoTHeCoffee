@@ -1,12 +1,11 @@
 package view;
 
+import controller.facade.Server;
 import controller.factorymethod.Envio;
 import controller.factorymethod.LogisticaAvion;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class GUIApp extends JFrame {
     private JButton enviar;
@@ -20,7 +19,10 @@ public class GUIApp extends JFrame {
     private GUIContainer guiContainer;
 
     //Tipo de envío con el patron factory.method
-    private  LogisticaAvion logisticaAvion = new LogisticaAvion();
+    private final LogisticaAvion logisticaAvion = new LogisticaAvion();
+    // Servidor para guardar datos del container
+    private final Server server = new Server();
+
     private static GUIApp guiApp;
 
     public static void main(String[] args) {
@@ -43,22 +45,15 @@ public class GUIApp extends JFrame {
         setBounds(250,100,720,520);
         setBounds(250,100,820,620);
         setVisible(true);
-        enlistarItemsButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                guiContainer = new GUIContainer();
-            }
-        });
-        enviar.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                enviarContainer();
-            }
-        });
+        enlistarItemsButton.addActionListener(e -> guiContainer = new GUIContainer());
+        enviar.addActionListener(e -> enviarContainer());
     }
-    private void enviarContainer(){
+    private void enviarContainer() {
         //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
         Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
+
+        // Guardamos datos del container en base de datos
+        server.saveContainer(guiApp.guiContainer.getContainer());
 
         //Mostrando mensaje de envío
         guiApp.mensajeDeTipoDeEnvio.setText(envio.enviar());

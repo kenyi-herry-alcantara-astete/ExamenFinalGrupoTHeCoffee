@@ -34,37 +34,25 @@ public class GUIContainer extends JFrame {
         PanelShowItems.doLayout();
         PanelShowItems.setLayout(new BoxLayout(PanelShowItems,BoxLayout.Y_AXIS));
 
-        FinishedButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                setVisible(false);
-            }
+        FinishedButton.addActionListener(e -> setVisible(false));
+
+        addItemButton.addActionListener(e -> {
+            //Antes de agregar se toma un snapshot y guardamos en la containerCaretaker
+            containerCaretaker.addSnapshot(container.createSnapshot());
+
+            //Agrego un item
+            container.addItem(textFieldName.getText(),Integer.parseInt(textFieldCosto.getText()),Integer.parseInt(textFieldPeso.getText()));
+            showItemsGui();
+
+            //Limpiando campos
+            textFieldName.setText("");
+            textFieldCosto.setText("");
+            textFieldPeso.setText("");
         });
-
-        addItemButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //Antes de agregar se toma un snapshot y guardamos en la containerCaretaker
-                containerCaretaker.addSnapshot(container.createSnapshot());
-
-                //Agrego un item
-                container.addItem(textFieldName.getText(),Integer.parseInt(textFieldCosto.getText()),Integer.parseInt(textFieldPeso.getText()));
-
-                showItemsGui();
-
-                //Limpiando campos
-                textFieldName.setText("");
-                textFieldCosto.setText("");
-                textFieldPeso.setText("");
-            }
-        });
-        deshacerButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                //Si presionamos deshacer, volvemos a un snapshot anterior.
-                container.restore(containerCaretaker.getRecentSnapshot());
-                showItemsGui();
-            }
+        deshacerButton.addActionListener(e -> {
+            //Si presionamos deshacer, volvemos a un snapshot anterior.
+            container.restore(containerCaretaker.getRecentSnapshot());
+            showItemsGui();
         });
     }
 
@@ -83,7 +71,7 @@ public class GUIContainer extends JFrame {
             JLabel labelPeso = new JLabel();
             JLabel countLabel = new JLabel();
 
-            countLabel.setText(String.valueOf(finalIdRelative+1)+". ");
+            countLabel.setText(finalIdRelative + 1 +". ");
 
             labelName.setText("Name:");
             labelCosto.setText("Costo:");
@@ -94,14 +82,10 @@ public class GUIContainer extends JFrame {
             JLabel labelPesoItem=new JLabel();
             JButton buttonDeleteItem = new JButton();
             buttonDeleteItem.setText("Delete");
-            buttonDeleteItem.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
+            buttonDeleteItem.addActionListener(e -> {
 
-                    //Elimino un item
-                    removeItemToContainer(finalIdRelative);
-                }
-
+                //Elimino un item
+                removeItemToContainer(finalIdRelative);
             });
             idRelative++;
             //Poniendo color
