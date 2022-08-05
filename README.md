@@ -277,7 +277,12 @@ class ContainerTest {
    }
 }
 
+
+
 ``` 
+![memento](./src/main/resources/pruebaMemento.png)
+
+
 
 #### 9. Programación GUI  
 >GUIApp:
@@ -285,7 +290,7 @@ class ContainerTest {
 >, uno para agregar items y el otro para enviar el producto.
 
 
-```
+``` java
 public class GUIApp extends JFrame {
     private JButton enviar;
     private JButton enlistarItemsButton;
@@ -350,7 +355,7 @@ public class GUIApp extends JFrame {
 >Le invito agregar tres ítems cualesquiera, eliminar el intermedio y presionar el “deshacer” y verificar que pasa.
 >Luego de estar seguro de la lista que quiere enviar. Presiona Finalizar. 
 
-```
+``` java
 public class GUIContainer extends JFrame {
     private JTextField textFieldName;
     private JButton addItemButton;
@@ -488,4 +493,3 @@ public class GUIContainer extends JFrame {
 }
 
 ```
-![memento](./src/main/resources/pruebaMemento.png)
