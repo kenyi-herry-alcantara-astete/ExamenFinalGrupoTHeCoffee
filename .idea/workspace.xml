@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="" />
+    <list default="true" id="442987b8-09c1-4742-853a-aad38ea8966e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/view/GUIContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/GUIContainer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Miller/IdeaProjects/ExamenFinalGrupoTHeCoffee",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Miller/IdeaProjects/ExamenFinalGrupoTHeCoffee&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -60,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LogisticaEnvioTest (1)">
+  <component name="RunManager" selected="Application.GUIApp">
     <configuration name="GUIApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -95,9 +98,12 @@
       </method>
     </configuration>
     <configuration name="LogisticaEnvioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="ExamenFinalGrupoTHeCoffee" />
+      <module name="ExamenFinalGrupoTHeCoffee2" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="LogisticaEnvioTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -115,11 +121,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LogisticaEnvioTest (1)" />
         <item itemvalue="Application.GUIApp" />
-        <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio (1)" />
-        <item itemvalue="JUnit.ContainerTest" />
         <item itemvalue="JUnit.LogisticaEnvioTest" />
+        <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio (1)" />
+        <item itemvalue="JUnit.LogisticaEnvioTest (1)" />
+        <item itemvalue="JUnit.ContainerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -132,7 +138,9 @@
       <option name="presentableId" value="Default" />
       <updated>1659131865061</updated>
       <workItem from="1659239310109" duration="884000" />
-      <workItem from="1659605211822" duration="3008000" />
+      <workItem from="1659605211822" duration="3630000" />
+      <workItem from="1659639807075" duration="2367000" />
+      <workItem from="1659774186542" duration="744000" />
     </task>
     <servers />
   </component>
