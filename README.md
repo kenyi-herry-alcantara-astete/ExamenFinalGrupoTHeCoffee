@@ -2,8 +2,8 @@
 | Integrantes                            |
 |----------------------------------------|
 | ALCANTARA ASTETE KENYI HERRY 20180343C |
-||
-|CAYCHO VILLALOBOS JOSÉ GABRIEL|
+|ROJAS SANCHEZ ALEXANDER MILLER 20190574H|
+|CAYCHO VILLALOBOS JOSÉ GABRIEL 20190584C|
 |CHAUCA DE LA CRUZ ANGEL 20182666D|
 
 #### 3. Descripción del problema a resolver:
