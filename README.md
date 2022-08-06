@@ -282,7 +282,33 @@ class ContainerTest {
 ``` 
 ![memento](./src/main/resources/pruebaMemento.png)
 
+>TestLogisticaEnvio
 
+Se verifica si para un peso mayor a 1000 el envío se realice por barco y para un envío menor igual 1000 se envía por aire
+```java
+public class LogisticaEnvioTest extends LogisticsShipping {
+    public LogisticaEnvioTest() {
+    }
+
+    @Test
+    public void TestgetEnvio() {
+        Container container = new Container();
+        container.setPesoTotal(4200);
+        Shipping envio = this.getEnvio(container);
+        Assertions.assertEquals("Enviado por Barco", envio.enviar());
+        Container container2 = new Container();
+        container2.setPesoTotal(800);
+        Shipping envio2 = this.getEnvio(container2);
+        Assertions.assertEquals("Enviado por Aire", envio2.enviar());
+    }
+
+    public Shipping createEnvio() {
+        return null;
+    }
+}
+``` 
+
+![factory](./src/main/resources/testLogicShipping.png)
 
 #### 9. Programación GUI  
 >GUIApp:

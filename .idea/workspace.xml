@@ -63,7 +63,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GUIApp">
+  <component name="RunManager" selected="JUnit.LogisticaEnvioTest">
     <configuration name="GUIApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -121,8 +121,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GUIApp" />
         <item itemvalue="JUnit.LogisticaEnvioTest" />
+        <item itemvalue="Application.GUIApp" />
         <item itemvalue="JUnit.LogisticaEnvioTest.TestgetEnvio (1)" />
         <item itemvalue="JUnit.LogisticaEnvioTest (1)" />
         <item itemvalue="JUnit.ContainerTest" />
