@@ -3,7 +3,7 @@
 |----------------------------------------|
 | ALCANTARA ASTETE KENYI HERRY 20180343C |
 ||
-||
+|CAYCHO VILLALOBOS JOSÉ GABRIEL|
 |CHAUCA DE LA CRUZ ANGEL 20182666D|
 
 #### 3. Descripción del problema a resolver:
