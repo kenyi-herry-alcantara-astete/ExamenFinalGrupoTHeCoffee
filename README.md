@@ -4,7 +4,7 @@
 | ALCANTARA ASTETE KENYI HERRY 20180343C |
 ||
 ||
-||
+|CHAUCA DE LA CRUZ ANGEL 20182666D|
 
 #### 3. Descripción del problema a resolver:
 
@@ -29,6 +29,8 @@ Imagenes que su empresa de logística está encargada en la  distribución de  d
 >Memento:
 
 ![memento](./src/main/resources/memento.png)
+
+
 
 >Clase Item: define los ítems que se enlistan en un container
 ```java
@@ -162,7 +164,6 @@ public class ContainerCaretaker {
 }
 
 ```
-
 >Factory-method
 
 ![memento](./src/main/resources/FactoryUML.png)
@@ -235,13 +236,18 @@ public class ShipShipping implements Shipping {
 }
 
 ```
+
+###### El diagrama de clase completo es:
+
+![memento](./src/main/resources/ExamenFinal.drawio.png)
+
 #### 7. Pruebas del sistema  
 >Test de restauración de historial:
 
 Agregaremos tres ítems al container. Luego crearemos una Snapshot para ese estado del container.
 Luego eliminaremos un ítem y diremos que fue el ítem equivocado. Pero como tenemos la posibilidad de regresar al historial anterior. Ejecutaremos la restauración y verificaremos que el ítem eliminado aún está en el container. 
 
-```java
+``` java
 class ContainerTest {
    @Test
    void restore() {
@@ -271,39 +277,219 @@ class ContainerTest {
    }
 }
 
-```
+
+
+``` 
 ![memento](./src/main/resources/pruebaMemento.png)
->Test de Logística de envio
-
-Agregamos peso al container y usando getEnvio para verificar el tipo de envio le asignamos a assertEquals para poder hacer la respectiva prueba correspondiente ya sea si es por avión o Barco
 
 
-```java
-public class LogisticaEnvioTest extends LogisticsShipping {
 
-   @Test
-   public void TestgetEnvio(){
-       Container container = new Container();
-       //se almacena un peso total de 4200
-       container.setPesoTotal(4200);
-       Shipping envio = getEnvio(container);
-       assertEquals( "Enviado por Barco",envio.enviar());
+#### 9. Programación GUI  
+>GUIApp:
+>Esta clase define la ventana principal donde se realiza el 50% de la funcionalidad total del software, presenta dos botones
+>, uno para agregar items y el otro para enviar el producto.
 
-       Container container2 = new Container();
-       //se almacena un peso total de 800
-       container2.setPesoTotal(800);
-       Shipping envio2 = getEnvio(container2);
-       assertEquals("Enviado por Aire",envio2.enviar());
 
-   }
+``` java
+public class GUIApp extends JFrame {
+    private JButton enviar;
+    private JButton enlistarItemsButton;
+    private JPanel PanelAppPrincipal;
+    private JLabel mensajeDeTipoDeEnvio;
+    private JPanel panelMensaje;
+    private JPanel topPanel;
+    private JPanel mainPanel;
 
-   @Override
-   public Shipping createEnvio() {
-       return null;
-   }
+    private GUIContainer guiContainer;
+
+    //Tipo de envío con el patron factory.method
+    private  LogisticaAvion logisticaAvion = new LogisticaAvion();
+    private static GUIApp guiApp;
+
+    public static void main(String[] args) {
+
+        //Inicio de app
+        guiApp= new GUIApp();
+
+    }
+
+    public GUIApp(){
+
+
+        PanelAppPrincipal.setLayout(new BorderLayout());
+        PanelAppPrincipal.add(topPanel,BorderLayout.NORTH);
+        PanelAppPrincipal.add(mainPanel,BorderLayout.CENTER);
+        PanelAppPrincipal.add(panelMensaje,BorderLayout.SOUTH);
+
+        setContentPane( PanelAppPrincipal);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(250,100,720,520);
+        setBounds(250,100,820,620);
+        setVisible(true);
+        enlistarItemsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                guiContainer = new GUIContainer();
+            }
+        });
+        enviar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                enviarContainer();
+            }
+        });
+    }
+    private void enviarContainer(){
+        //Obtenemos el tipo de envío dependiendo el container enlistado en el patron memento
+        Envio envio = logisticaAvion.getEnvio(guiApp.guiContainer.getContainer());
+
+        //Mostrando mensaje de envío
+        guiApp.mensajeDeTipoDeEnvio.setText(envio.enviar());
+    }
 }
 
 ```
+>GUIContainer:
+>Agregar ítems,  estos ítems tienen un nombre, su costo  y un peso.
+>Si desea puede eliminar un item agregado , pero si quiere volver en el tiempo, solo tiene que presionar el botón “deshacer”. 
+>Le invito agregar tres ítems cualesquiera, eliminar el intermedio y presionar el “deshacer” y verificar que pasa.
+>Luego de estar seguro de la lista que quiere enviar. Presiona Finalizar. 
+
+``` java
+public class GUIContainer extends JFrame {
+    private JTextField textFieldName;
+    private JButton addItemButton;
+    private JTextField textFieldCosto;
+    private JTextField textFieldPeso;
+    private JPanel PanelInputItem;
+    private JPanel PanelShowItems;
+    private JPanel PanelContainer;
+    private JButton FinishedButton;
+    private JButton deshacerButton;
+    Container container = new Container();
+    ContainerCaretaker containerCaretaker = new ContainerCaretaker();
+    public GUIContainer(){
+        setContentPane(PanelContainer);
+
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setBounds(250,100,720,520);
+        setBounds(250,100,820,620);
+        setVisible(true);
 
 
 
+
+        PanelShowItems.doLayout();
+        PanelShowItems.setLayout(new BoxLayout(PanelShowItems,BoxLayout.Y_AXIS));
+
+        FinishedButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+            }
+        });
+
+        addItemButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Antes de agregar se toma un snapshot y guardamos en la containerCaretaker
+                containerCaretaker.addSnapshot(container.createSnapshot());
+
+                //Agrego un item
+                container.addItem(textFieldName.getText(),Integer.parseInt(textFieldCosto.getText()),Integer.parseInt(textFieldPeso.getText()));
+
+                showItemsGui();
+
+                //Limpiando campos
+                textFieldName.setText("");
+                textFieldCosto.setText("");
+                textFieldPeso.setText("");
+            }
+        });
+        deshacerButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                //Si presionamos deshacer, volvemos a un snapshot anterior.
+                container.restore(containerCaretaker.getRecentSnapshot());
+                showItemsGui();
+            }
+        });
+    }
+
+    private void showItemsGui(){
+
+        //Limpiando la anterior lista
+        PanelShowItems.removeAll();
+        //Mostrando todos lis items actuales
+        int idRelative = 0;
+        for (Item item: container.getItems()) {
+            int finalIdRelative = idRelative;
+            //Creando panel item
+            JPanel PanelOneItem= new JPanel();
+            JLabel labelName = new JLabel();
+            JLabel labelCosto = new JLabel();
+            JLabel labelPeso = new JLabel();
+            JLabel countLabel = new JLabel();
+
+            countLabel.setText(String.valueOf(finalIdRelative+1)+". ");
+
+            labelName.setText("Name:");
+            labelCosto.setText("Costo:");
+            labelPeso.setText("Peso:");
+
+            JLabel labelNameItem = new JLabel();
+            JLabel labelCostoItem = new JLabel();
+            JLabel labelPesoItem=new JLabel();
+            JButton buttonDeleteItem = new JButton();
+            buttonDeleteItem.setText("Delete");
+            buttonDeleteItem.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    //Elimino un item
+                    removeItemToContainer(finalIdRelative);
+                }
+
+            });
+            idRelative++;
+            //Poniendo color
+            PanelOneItem.setBackground(new Color(51,153,255));
+
+            //Configurando valores para mostrar
+            labelNameItem.setText(item.getName());
+            labelCostoItem.setText(String.valueOf(item.getCosto()));
+            labelPesoItem.setText(String.valueOf(item.getPeso()));
+
+            //Agregando los labels al PanelOneItem
+            PanelOneItem.add(countLabel);
+            PanelOneItem.add(labelName);
+            PanelOneItem.add(labelNameItem);
+            PanelOneItem.add(labelCosto);
+            PanelOneItem.add(labelCostoItem);
+            PanelOneItem.add(labelPeso);
+            PanelOneItem.add(labelPesoItem);
+            PanelOneItem.add(buttonDeleteItem);
+
+            //Agregando el panel model.memento.Item al PanelShowItems
+            PanelShowItems.add(PanelOneItem);
+            PanelShowItems.revalidate();
+            PanelShowItems.repaint();
+
+        }
+    }
+
+    private void removeItemToContainer( int idRelative){
+        //Cada que eliminas un item se toma un snapshot y guardamos en la containerCaretaker
+        containerCaretaker.addSnapshot(container.createSnapshot());
+
+        //Elimino el item
+        container.removeItem(idRelative);
+        showItemsGui();
+    }
+
+    public Container getContainer() {
+        return container;
+    }
+}
+
+```
